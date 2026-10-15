@@ -20,7 +20,7 @@ export class Garage {
                 break
             }
         }
-
+        
         if (duplicated) {
             console.log("Carro duplicado!")
         } else {

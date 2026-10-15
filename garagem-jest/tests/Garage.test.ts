@@ -42,6 +42,16 @@ describe("Estado de armazenamento", () => {
 
         expect(car.getStored()).toBe(false)
     })
+
+    test("Mantém o estado de cada carro independente", () => {
+        const gol = new Car("Volkswagen", "Gol", 2010)
+        const polo = new Car("Volkswagen", "Polo", 2018)
+
+        gol.setStored(true)
+
+        expect(gol.getStored()).toBe(true)
+        expect(polo.getStored()).toBe(false)
+    })
 })
 
 describe("Adicionar carros", () => {
